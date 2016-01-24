@@ -25,7 +25,7 @@ app.use(express.static(static_path))
     data_url = data_url.replace(/^data:image\/jpeg+;base64,/, "");
     data_url = data_url.replace(/ /g, '+');
 
-    fs.writeFile(__dirname + '/images/default.' + ext, data_url, 'base64', function(err) {
+    fs.writeFile(__dirname + '/public/default.png' , data_url, 'base64', function(err) {
         console.log(err);
         res.send('success');
         console.log('done');
