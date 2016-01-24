@@ -1,6 +1,6 @@
 # React Redux Webpack Heroku Mocha chai starter kit
 
-This is simple starter kit, made for some of my application like [contact manager](https://github.com/sandyjoshi/react-webpack-heroku) and [cropping app](https://github.com/sandyjoshi/).
+This is simple starter kit, made for some of my application like [contact manager](https://github.com/sandyjoshi/react-webpack-heroku) and [cropping app](https://github.com/sandyjoshi/crop-image/).
 
 ## To Run
 
