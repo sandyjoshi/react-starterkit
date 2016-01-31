@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var app = express();
 
 var isDevelopment = (process.env.NODE_ENV !== 'production');
-var static_path = path.join(__dirname, 'public');
+var static_path = path.join(__dirname, '../public');
 
 app.use(express.static(static_path))
   .get('/', function (req, res) {
@@ -17,7 +17,7 @@ app.use(express.static(static_path))
   });
 
 if (isDevelopment) {
-  var config = require('./webpack.config');
+  var config = require('../webpack.config');
   var WebpackDevServer = require('webpack-dev-server');
 
   new WebpackDevServer(webpack(config), {
