@@ -28,10 +28,16 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx$/,
-        loader: 'react-hot!babel?stage=0',
+        loader: 'react-hot!babel',
         include: path.join(__dirname, 'src') },
       { test: /\.js$/,
-        loader: 'babel?stage=0',
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          plugins: ['transform-runtime'],
+          presets: ['es2015', 'react', 'stage-0']
+        },
         include: path.join(__dirname, 'src') },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
