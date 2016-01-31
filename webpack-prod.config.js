@@ -31,11 +31,21 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx?$/,
-        loader: 'babel?stage=0',
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          plugins: ['transform-runtime'],
+          presets: ['es2015', 'react', 'stage-0']
+        },
         include: path.join(__dirname, 'src') },
       { test: /\.js?$/,
-        loader: 'babel?stage=0',
-        exclude: /node_modules/ },
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          plugins: ['transform-runtime'],
+          presets: ['es2015', 'react', 'stage-0']
+        }, },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'css') },
